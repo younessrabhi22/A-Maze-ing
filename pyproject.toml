@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mazegen"
+version = "1.0.0"
+description = "A reusable perfect maze generator (DFS / Prim's)."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "aait-ela", email = "aait-ela@student.1337.ma" },
+    { name = "yrabhi",   email = "yrabhi@student.1337.ma"   },
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.flake8]
+max-line-length = 79
+exclude = [
+    ".git",
+    "__pycache__",
+    "build",
+    "dist",
+    "*.egg-info",
+    ".mypy_cache",
+    "venv",
+    ".venv",
+]
